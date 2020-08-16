@@ -55,6 +55,7 @@ function App() {
   return (
     <div className="App">
       <h1>Currency Converter</h1>
+      Current
       <CurrencyConverterRow
         ops={currencyOptions}
         selectedCurrency={currentCurrency}
@@ -63,6 +64,7 @@ function App() {
         AmountOnChangeHandler={currentAmountHandler}
       />
       <p className="equals">=</p>
+      Converted
       <CurrencyConverterRow
         ops={currencyOptions}
         selectedCurrency={convertedCurrency}
