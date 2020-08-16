@@ -1,14 +1,17 @@
 import React from "react";
 import "./CurrencyConverterRow.css";
 
-const CurrencyConverterRow = () => {
+const CurrencyConverterRow = (props) => {
+  console.log(props.options);
   return (
     <div>
       <input className="input" type="number"></input>
-      <select>
-        <option className="select" value="H1">
-          H1
-        </option>
+      <select className="select">
+        {props.ops.map((Option) => (
+          <option key={Option} value={Option}>
+            {Option}
+          </option>
+        ))}
       </select>
     </div>
   );

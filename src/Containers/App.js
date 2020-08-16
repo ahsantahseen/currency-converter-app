@@ -4,7 +4,7 @@ import CurrencyConverterRow from "../Components/CurrencyConRow/CurrencyConverter
 import axios from "axios";
 
 function App() {
-  const [currencyOptions, setcurrencyOptions] = useState();
+  const [currencyOptions, setcurrencyOptions] = useState([]);
   console.log(currencyOptions);
 
   useEffect(() => {
@@ -18,9 +18,9 @@ function App() {
   return (
     <div className="App">
       <h1>Currency Converter</h1>
-      <CurrencyConverterRow />
+      <CurrencyConverterRow ops={currencyOptions} />
       <p className="equals">=</p>
-      <CurrencyConverterRow />
+      <CurrencyConverterRow ops={currencyOptions} />
     </div>
   );
 }
