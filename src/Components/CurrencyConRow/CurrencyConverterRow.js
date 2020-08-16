@@ -10,7 +10,11 @@ const CurrencyConverterRow = (props) => {
         value={props.Amount}
         onChange={props.AmountOnChangeHandler}
       ></input>
-      <select className="select" onChange={props.OptionsonChangeHandler}>
+      <select
+        className="select"
+        value={props.selectedCurrency}
+        onChange={props.OptionsonChangeHandler}
+      >
         {props.ops.map((Option) => (
           <option key={Option} value={Option}>
             {Option}
