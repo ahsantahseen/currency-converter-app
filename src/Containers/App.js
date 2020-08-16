@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import CurrencyConverterRow from "../Components/CurrencyConRow/CurrencyConverterRow";
 import axios from "axios";
+import FooterBar from "../Components/Footerbar/FooterBar";
 
 function App() {
   const [currencyOptions, setcurrencyOptions] = useState([]);
@@ -55,7 +56,7 @@ function App() {
   return (
     <div className="App">
       <h1>Currency Converter</h1>
-      Current
+      <b>Current</b>
       <CurrencyConverterRow
         ops={currencyOptions}
         selectedCurrency={currentCurrency}
@@ -64,7 +65,7 @@ function App() {
         AmountOnChangeHandler={currentAmountHandler}
       />
       <p className="equals">=</p>
-      Converted
+      <b>Converted</b>
       <CurrencyConverterRow
         ops={currencyOptions}
         selectedCurrency={convertedCurrency}
@@ -72,6 +73,7 @@ function App() {
         Amount={convertedAmount}
         AmountOnChangeHandler={convertedAmountHandler}
       />
+      <FooterBar></FooterBar>
     </div>
   );
 }
